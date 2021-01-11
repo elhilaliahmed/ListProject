@@ -31,6 +31,5 @@ public class Main {
 
                 new ArrayList<>(Arrays.asList(
                         new Student("Jordan", "33333", "New York", 18, "Mathematics"))));
-
     }
 }
