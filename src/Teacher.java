@@ -7,8 +7,10 @@ public class Teacher extends Person {
         this.salary = salary;
     }
 
+
+
     @Override
     public String toString() {
-        return "Teacher " + getName() + " salary is " + salary + "\n";
+        return getName();
     }
 }

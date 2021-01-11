@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class School extends Person {
-
+public class School {
+    private static final String name = "BFH";
     List<Teacher> teachers;
     List<Student> students;
     School(List<Teacher> teachers, List<Student> students) {
-       this.teachers = teachers;
-       this.students = students;
+        this.teachers = teachers;
+        this.students = students;
     }
 
 
@@ -27,16 +27,25 @@ public class School extends Person {
         this.students = students;
     }
 
+    private Teacher findTeacher(String name) {
+        for (Teacher teacher : teachers) {
+            if (teacher.getName().equals(name)) {
+                return teacher;
+            }
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
-        String schoolsDetails = "";
+        String schoolsDetails = "The teachers at the " + name + " are:\n";
 
         for (Teacher teacher : teachers) {
             schoolsDetails += teacher.toString() + "\n";
         }
-        schoolsDetails += "\n\n";
+        schoolsDetails += "\n\n" + "The students at the " + name + " are:\n";
         for (Student student : students) {
-            schoolsDetails += student.toString();
+            schoolsDetails += student.toString() + "\n";
         }
         return schoolsDetails;
     }

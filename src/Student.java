@@ -7,13 +7,9 @@ public class Student extends Person{
         this.module = module;
     }
 
+
     @Override
     public String toString() {
-        return
-                "Name = " + getName() +
-                        "\nPhoneNumber = " + getPhoneNumber() +
-                        "\nAddress = " + getAddress() +
-                        "\nAge = " + getAge() +
-                        "\nModule = " + module + "\n\n\n";
+        return getName();
     }
 }

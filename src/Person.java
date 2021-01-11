@@ -17,6 +17,10 @@ public class Person {
         return name;
     }
 
+    public void remove() {
+
+    }
+
     public void setName(String name) {
         this.name = name;
     }
